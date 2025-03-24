@@ -361,7 +361,7 @@ function addRow(data) {
   for (let i = 0; i < 6; i++) {
     const cell = document.createElement('td');
 
-    cell.append(data[i]);
+    cell.textContent = data[i];
     row.appendChild(cell);
   }
 
@@ -376,7 +376,7 @@ people.forEach((man) => {
   const details = [man.name, gender, man.born, man.died, age, century];
   const tabRow = addRow(details);
 
-  const table = document.querySelector('table tbody');
+  const table = document.querySelector('.dashboard');
 
   table.appendChild(tabRow);
 });
